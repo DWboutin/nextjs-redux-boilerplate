@@ -1,0 +1,6 @@
+node_modules
+.next
+.idea
+*.map
+.DS_Store
+*.log

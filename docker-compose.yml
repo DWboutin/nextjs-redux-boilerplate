@@ -1,0 +1,21 @@
+version: "3"
+services:
+  dev:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+    command: npm run dev
+    env_file:
+      - app-variables.env
+    environment:
+      - NODE_ENV=development
+
+  build-project:
+    build: .
+    volumes:
+      - .:/app
+    command: bash -c "npm install"
