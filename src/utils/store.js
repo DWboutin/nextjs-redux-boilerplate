@@ -12,6 +12,7 @@ export default (initialState) => {
 
   if (module.hot) {
     module.hot.accept('../reducers', () => {
+      // noinspection Eslint
       console.log('Replacing reducer');
       store.replaceReducer(require('../reducers').default);
     });
