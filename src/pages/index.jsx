@@ -60,7 +60,11 @@ class Index extends React.Component {
         <h1>Next.js bootsrap</h1>
         <p>Count from exampleData in redux: {exampleData}</p>
         <button onClick={this.exampleDataFetching}>Load some data</button>
-        <button onClick={() => { this.props.changeLocale(newLocale); }}>Change locale</button>
+        <button
+          className="change-locale"
+          onClick={() => { this.props.changeLocale(newLocale); }}>
+          Change locale
+        </button>
         <FormattedMessage id="greeting" defaultMessage="Hello, World!" />
         {exampleAsyncData &&
         (Object.keys(exampleAsyncData).map(key => (
